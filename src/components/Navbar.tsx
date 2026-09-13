@@ -29,10 +29,10 @@ export default function Navbar() {
 
         {/* Desktop CTA */}
         <div className="hidden md:flex">
-          <button className="bg-primary-600 text-white px-5 py-2.5 rounded-xl font-semibold text-sm hover:scale-105 active:scale-95 transition-all shadow-md shadow-primary-600/20 flex items-center gap-2 group">
+          <Link href="#ecossistema" className="bg-primary-600 text-white px-5 py-2.5 rounded-xl font-semibold text-sm hover:scale-105 active:scale-95 transition-all shadow-md shadow-primary-600/20 flex items-center gap-2 group">
             Começar Agora
             <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-          </button>
+          </Link>
         </div>
 
         {/* Mobile Toggle */}
@@ -53,9 +53,9 @@ export default function Navbar() {
           <Link href="#impacto" onClick={() => setIsOpen(false)} className="font-semibold text-lg text-primary-900">Impacto</Link>
           <Link href="#contato" onClick={() => setIsOpen(false)} className="font-semibold text-lg text-primary-900">Contato</Link>
           <hr className="border-border-subtle my-2" />
-          <button className="bg-primary-600 text-white w-full py-3 rounded-xl font-semibold hover:bg-primary-500 transition-colors">
+          <Link href="#ecossistema" onClick={() => setIsOpen(false)} className="bg-primary-600 text-white w-full py-3 rounded-xl font-semibold flex justify-center hover:bg-primary-500 transition-colors">
             Começar Agora
-          </button>
+          </Link>
         </motion.div>
       )}
     </motion.header>
