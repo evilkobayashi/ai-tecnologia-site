@@ -1,69 +1,169 @@
-import Image from "next/image";
+"use client";
+
+import { motion } from "framer-motion";
+import { ArrowRight, Sparkles, BookOpen, BrainCircuit, LineChart, CheckCircle2, ShieldCheck } from "lucide-react";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
+    <main className="flex flex-col w-full overflow-hidden">
+      <Navbar />
+
+      {/* HERO SECTION WITH AURORA BACKGROUND */}
+      <section className="relative min-h-[90vh] flex flex-col justify-center items-center text-center px-4 pt-24 pb-20">
+        {/* Animated Background Blobs */}
+        <div className="absolute inset-0 overflow-hidden -z-10 bg-surface-light">
+          <div className="absolute top-1/4 left-1/4 w-72 md:w-96 h-72 md:h-96 bg-primary-400/30 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
+          <div className="absolute top-1/3 right-1/4 w-72 md:w-96 h-72 md:h-96 bg-accent-cyan/20 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000"></div>
+          <div className="absolute bottom-1/4 left-1/3 w-72 md:w-96 h-72 md:h-96 bg-accent-amber/20 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-4000"></div>
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="max-w-4xl mx-auto flex flex-col items-center z-10"
+        >
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 border border-primary-900/10 backdrop-blur-sm text-sm font-semibold text-primary-900 mb-8 shadow-sm">
+            <Sparkles size={16} className="text-primary-600" />
+            <span>Educação de Fronteira. Preço do Brasil Real.</span>
+          </div>
+
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-text-primary leading-[1.1] mb-6">
+            A inteligência que <br className="hidden md:block" />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-accent-cyan">destrava o potencial</span> <br className="hidden md:block" />
+            da educação brasileira.
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+
+          <p className="text-lg md:text-xl text-text-secondary max-w-2xl mb-10 leading-relaxed">
+            Nossa holding une o calor humano brasileiro à fronteira da Inteligência Artificial. Soluções para estudantes, professores e redes públicas de ensino.
           </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+            <button className="bg-primary-900 text-white px-8 py-4 rounded-xl font-bold text-lg hover:scale-105 active:scale-95 transition-all shadow-xl shadow-primary-900/20 flex items-center justify-center gap-2 group">
+              Conhecer Soluções
+              <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+            </button>
+            <button className="bg-white text-primary-900 border border-border-subtle px-8 py-4 rounded-xl font-bold text-lg hover:bg-slate-50 transition-colors flex items-center justify-center gap-2">
+              Assista ao Manifesto
+            </button>
+          </div>
+        </motion.div>
+      </section>
+
+      {/* ECOSSISTEMA - BENTO GRID */}
+      <section id="ecossistema" className="py-24 bg-white px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-16 md:text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">O Ecossistema AÍ</h2>
+            <p className="text-text-secondary md:text-lg max-w-2xl mx-auto">Três produtos interdependentes projetados para erradicar a defasagem escolar e devolver a serenidade ao professor.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Card 1: Alfabetiza */}
+            <motion.div 
+              whileHover={{ y: -5 }}
+              className="bg-surface-light border border-border-subtle rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all hover:border-accent-amber group overflow-hidden relative"
+            >
+              <div className="absolute top-0 right-0 w-32 h-32 bg-accent-amber/10 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
+              <div className="w-14 h-14 rounded-2xl bg-white border border-accent-amber/20 flex items-center justify-center mb-6 shadow-sm">
+                <BookOpen className="text-accent-amber" size={28} />
+              </div>
+              <h3 className="text-2xl font-bold text-text-primary mb-3">Alfabetiza AÍ</h3>
+              <p className="text-text-secondary text-sm leading-relaxed mb-8">
+                IA Voice-First para crianças, neurodivergentes e EJA. Aprenda a ler conversando, sem precisar saber ler.
+              </p>
+              <div className="mt-auto">
+                <a href="#alfabetiza" className="text-accent-amber font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">
+                  Explorar Alfabetiza <ArrowRight size={16} />
+                </a>
+              </div>
+            </motion.div>
+
+            {/* Card 2: Reforça */}
+            <motion.div 
+              whileHover={{ y: -5 }}
+              className="bg-surface-light border border-border-subtle rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all hover:border-accent-cyan group overflow-hidden relative"
+            >
+              <div className="absolute top-0 right-0 w-32 h-32 bg-accent-cyan/10 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
+              <div className="w-14 h-14 rounded-2xl bg-white border border-accent-cyan/20 flex items-center justify-center mb-6 shadow-sm">
+                <BrainCircuit className="text-accent-cyan" size={28} />
+              </div>
+              <h3 className="text-2xl font-bold text-text-primary mb-3">Reforça AÍ</h3>
+              <p className="text-text-secondary text-sm leading-relaxed mb-8">
+                Tutor Socrático Gamificado (1º ao Médio). Tira foto do caderno e ensina sem dar a resposta pronta. (+500 Aura)
+              </p>
+              <div className="mt-auto">
+                <a href="#reforca" className="text-accent-cyan font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">
+                  Explorar Reforça <ArrowRight size={16} />
+                </a>
+              </div>
+            </motion.div>
+
+            {/* Card 3: Planeja */}
+            <motion.div 
+              whileHover={{ y: -5 }}
+              className="bg-surface-light border border-border-subtle rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all hover:border-accent-emerald group overflow-hidden relative"
+            >
+              <div className="absolute top-0 right-0 w-32 h-32 bg-accent-emerald/10 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
+              <div className="w-14 h-14 rounded-2xl bg-white border border-accent-emerald/20 flex items-center justify-center mb-6 shadow-sm">
+                <LineChart className="text-accent-emerald" size={28} />
+              </div>
+              <h3 className="text-2xl font-bold text-text-primary mb-3">Planeja AÍ</h3>
+              <p className="text-text-secondary text-sm leading-relaxed mb-8">
+                Co-piloto do educador. Gere planos de aula completos alinhados à BNCC e atividades AEE/PEI em menos de 60 segundos.
+              </p>
+              <div className="mt-auto">
+                <a href="#planeja" className="text-accent-emerald font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">
+                  Explorar Planeja <ArrowRight size={16} />
+                </a>
+              </div>
+            </motion.div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* PROVA SOCIAL / BNCC */}
+      <section className="py-20 bg-primary-900 text-white px-6">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
+          <div className="md:w-1/2">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Construído com rigor para o Brasil Real.</h2>
+            <p className="text-primary-400/90 text-lg mb-8 leading-relaxed">
+              Nossa tecnologia não substitui o professor — ela devolve o tempo e a dignidade para que o educador foque no que importa: a relação humana.
+            </p>
+            <div className="flex flex-col gap-4">
+              <div className="flex items-center gap-3">
+                <CheckCircle2 className="text-accent-emerald" />
+                <span className="font-medium">Alinhamento 100% à BNCC</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <ShieldCheck className="text-accent-cyan" />
+                <span className="font-medium">Privacidade e conformidade LGPD</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <CheckCircle2 className="text-accent-amber" />
+                <span className="font-medium">Metodologias Ativas e Fônicas validadas</span>
+              </div>
+            </div>
+          </div>
+          
+          <div className="md:w-1/2 bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-sm">
+            <div className="flex gap-4 mb-6">
+              <div className="w-12 h-12 rounded-full bg-primary-400/30 flex items-center justify-center font-bold">M</div>
+              <div>
+                <h4 className="font-bold text-lg">Maria Santos</h4>
+                <p className="text-primary-400 text-sm">Professora da Rede Estadual, SP</p>
+              </div>
+            </div>
+            <p className="text-lg italic text-primary-100 leading-relaxed">
+              "O Planeja AÍ me devolveu meus domingos com a família. E ver meus alunos usando o Reforça AÍ para estudar geometria por vontade própria, tentando ganhar 'Aura', foi algo que eu não via há 15 anos."
+            </p>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <Footer />
+    </main>
   );
 }
