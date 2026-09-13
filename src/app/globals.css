@@ -2,8 +2,10 @@
 
 @theme inline {
   --color-primary-900: #1E1B4B;
+  --color-primary-800: #272368;
   --color-primary-600: #4F46E5;
   --color-primary-400: #818CF8;
+  --color-primary-100: #E0E7FF;
   --color-accent-cyan: #06B6D4;
   --color-accent-amber: #F59E0B;
   --color-accent-emerald: #10B981;
@@ -27,6 +29,23 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+}
+
+/* Selection color */
+::selection {
+  background-color: #818CF8;
+  color: white;
+}
+::-moz-selection {
+  background-color: #818CF8;
+  color: white;
+}
+
+/* Accessible focus-visible rings */
+*:focus-visible {
+  outline: 2px solid #4F46E5;
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
 /* Utilitário para ocultar barra de rolagem */
@@ -54,5 +73,28 @@ body {
   animation-delay: 4s;
 }
 
+/* Smooth scroll */
 html { scroll-behavior: smooth; }
 
+/* Gradient text helper */
+.gradient-text {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Print styles */
+@media print {
+  nav, footer, .whatsapp-fab {
+    display: none !important;
+  }
+  section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  * {
+    color: black !important;
+    background: white !important;
+    box-shadow: none !important;
+  }
+}
