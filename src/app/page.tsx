@@ -95,11 +95,11 @@ export default function Home() {
           <ScrollReveal>
             <div className="mb-16 md:text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">O Ecossistema AÍ</h2>
-              <p className="text-text-secondary md:text-lg max-w-2xl mx-auto">Três produtos interdependentes projetados para erradicar a defasagem escolar e devolver a serenidade ao professor.</p>
+              <p className="text-text-secondary md:text-lg max-w-2xl mx-auto">Quatro produtos interdependentes projetados para erradicar a defasagem escolar e devolver a serenidade ao professor.</p>
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <ScrollReveal delay={0.1} direction="up">
               <motion.div 
                 whileHover={{ y: -5 }}
@@ -171,6 +171,31 @@ export default function Home() {
                 </div>
               </motion.div>
             </ScrollReveal>
+
+            <ScrollReveal delay={0.4} direction="up">
+              <motion.div 
+                whileHover={{ y: -5 }}
+                className="bg-surface-light border border-border-subtle rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all hover:border-red-600 group overflow-hidden relative cursor-pointer h-full flex flex-col"
+              >
+                <div className="absolute top-0 right-0 w-32 h-32 bg-red-600/10 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
+                <div className="absolute top-6 right-6 px-3 py-1 bg-red-100 border border-red-200 rounded-full text-xs font-bold text-red-700 shadow-sm animate-pulse">
+                  Ao Vivo
+                </div>
+                <div className="w-14 h-14 rounded-2xl bg-white border border-red-600/20 flex items-center justify-center mb-6 shadow-sm relative z-10 group-hover:bg-red-600/5 transition-colors">
+                  <PenTool className="text-red-600" size={28} />
+                </div>
+                <h3 className="text-2xl font-bold text-text-primary mb-3">Redação Nota 10 AÍ</h3>
+                <p className="text-text-secondary text-sm leading-relaxed mb-8 flex-grow">
+                  Corretor automático de redações nos padrões do ENEM. Envie seu texto, receba feedback detalhado, competência por competência, e evolua instantaneamente.
+                </p>
+                <div className="mt-auto pt-4 border-t border-border-subtle/50">
+                  <a href="https://redacao-nota-10-ia.vercel.app" target="_blank" rel="noopener noreferrer" className="text-red-600 font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">
+                    Acessar Plataforma <ArrowRight size={16} />
+                  </a>
+                </div>
+              </motion.div>
+            </ScrollReveal>
+
           </div>
         </div>
       </section>
