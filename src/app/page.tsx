@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles, BookOpen, BrainCircuit, LineChart, CheckCircle2, ShieldCheck, HeartHandshake, Zap, Users, MessageSquare, ChevronDown, Send, Shield, Clock, GraduationCap, PenTool } from "lucide-react";
+import { ArrowRight, Sparkles, BookOpen, BrainCircuit, LineChart, CheckCircle2, ShieldCheck, HeartHandshake, Zap, Users, MessageSquare, ChevronDown, Send, Shield, Clock, GraduationCap } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppFab from "@/components/WhatsAppFab";
@@ -32,22 +32,22 @@ export default function Home() {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 border border-primary-900/10 backdrop-blur-sm text-sm font-semibold text-primary-900 mb-8 shadow-sm">
             <Sparkles size={16} className="text-primary-600" />
-            <span>EducaÃ§Ã£o de Fronteira. PreÃ§o do Brasil Real.</span>
+            <span>Educação de Fronteira. Preço do Brasil Real.</span>
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-text-primary leading-[1.1] mb-6">
-            A inteligÃªncia que <br className="hidden md:block" />
+            A inteligência que <br className="hidden md:block" />
             <span className="gradient-text bg-gradient-to-r from-primary-600 to-accent-cyan">destrava o potencial</span> <br className="hidden md:block" />
-            da educaÃ§Ã£o brasileira.
+            da educação brasileira.
           </h1>
 
           <p className="text-lg md:text-xl text-text-secondary max-w-2xl mb-10 leading-relaxed">
-            Nossa holding une o calor humano brasileiro Ã  fronteira da InteligÃªncia Artificial. SoluÃ§Ãµes para estudantes, professores e redes pÃºblicas de ensino.
+            Nossa holding une o calor humano brasileiro à fronteira da Inteligência Artificial. Soluções para estudantes, professores e redes públicas de ensino.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mb-16">
             <a href="#ecossistema" className="bg-primary-900 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-primary-800 hover:scale-105 active:scale-95 transition-all shadow-xl shadow-primary-900/20 flex items-center justify-center gap-2 group">
-              Conhecer SoluÃ§Ãµes
+              Conhecer Soluções
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
             </a>
             <a href="#manifesto" className="bg-white text-primary-900 border border-border-subtle px-8 py-4 rounded-xl font-bold text-lg hover:bg-slate-50 transition-colors flex items-center justify-center gap-2">
@@ -70,7 +70,7 @@ export default function Home() {
               ))}
             </div>
             <p className="text-sm font-medium text-text-secondary">
-              JÃ¡ usado por mais de <strong className="text-primary-900">500 professores</strong> em todo o Brasil.
+              Já usado por mais de <strong className="text-primary-900">500 professores</strong> em todo o Brasil.
             </p>
           </div>
         </motion.div>
@@ -94,7 +94,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <ScrollReveal>
             <div className="mb-16 md:text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">O Ecossistema AÃ</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">O Ecossistema AÍ</h2>
               <p className="text-text-secondary md:text-lg max-w-2xl mx-auto">Quatro produtos interdependentes projetados para erradicar a defasagem escolar e devolver a serenidade ao professor.</p>
             </div>
           </ScrollReveal>
@@ -112,9 +112,9 @@ export default function Home() {
                 <div className="w-14 h-14 rounded-2xl bg-white border border-accent-amber/20 flex items-center justify-center mb-6 shadow-sm relative z-10 group-hover:bg-accent-amber/5 transition-colors">
                   <BookOpen className="text-accent-amber" size={28} />
                 </div>
-                <h3 className="text-2xl font-bold text-text-primary mb-3">Alfabetiza AÃ</h3>
+                <h3 className="text-2xl font-bold text-text-primary mb-3">Alfabetiza AÍ</h3>
                 <p className="text-text-secondary text-sm leading-relaxed mb-8 flex-grow">
-                  IA Voice-First para crianÃ§as, neurodivergentes e EJA. Aprenda a ler conversando, sem precisar saber ler.
+                  IA Voice-First para crianças, neurodivergentes e EJA. Aprenda a ler conversando, sem precisar saber ler.
                 </p>
                 <div className="mt-auto pt-4 border-t border-border-subtle/50">
                   <span className="text-accent-amber font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">
@@ -131,14 +131,14 @@ export default function Home() {
               >
                 <div className="absolute top-0 right-0 w-32 h-32 bg-accent-cyan/10 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
                 <div className="absolute top-6 right-6 px-3 py-1 bg-white/80 backdrop-blur-sm border border-border-subtle rounded-full text-xs font-bold text-text-secondary shadow-sm">
-                  LanÃ§amento 2026
+                  Lançamento 2026
                 </div>
                 <div className="w-14 h-14 rounded-2xl bg-white border border-accent-cyan/20 flex items-center justify-center mb-6 shadow-sm relative z-10 group-hover:bg-accent-cyan/5 transition-colors">
                   <BrainCircuit className="text-accent-cyan" size={28} />
                 </div>
-                <h3 className="text-2xl font-bold text-text-primary mb-3">ReforÃ§a AÃ</h3>
+                <h3 className="text-2xl font-bold text-text-primary mb-3">Reforça AÍ</h3>
                 <p className="text-text-secondary text-sm leading-relaxed mb-8 flex-grow">
-                  Tutor SocrÃ¡tico Gamificado (1Âº ao MÃ©dio). Tira foto do caderno e ensina sem dar a resposta pronta. (+500 Aura)
+                  Tutor Socrático Gamificado (1º ao Médio). Tira foto do caderno e ensina sem dar a resposta pronta. (+500 Aura)
                 </p>
                 <div className="mt-auto pt-4 border-t border-border-subtle/50">
                   <span className="text-accent-cyan font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">
@@ -160,9 +160,9 @@ export default function Home() {
                 <div className="w-14 h-14 rounded-2xl bg-white border border-accent-emerald/20 flex items-center justify-center mb-6 shadow-sm relative z-10 group-hover:bg-accent-emerald/5 transition-colors">
                   <LineChart className="text-accent-emerald" size={28} />
                 </div>
-                <h3 className="text-2xl font-bold text-text-primary mb-3">Planeja AÃ</h3>
+                <h3 className="text-2xl font-bold text-text-primary mb-3">Planeja AÍ</h3>
                 <p className="text-text-secondary text-sm leading-relaxed mb-8 flex-grow">
-                  Co-piloto do educador. Gere planos de aula completos alinhados Ã  BNCC e atividades AEE/PEI em menos de 60 segundos.
+                  Co-piloto do educador. Gere planos de aula completos alinhados à BNCC e atividades AEE/PEI em menos de 60 segundos.
                 </p>
                 <div className="mt-auto pt-4 border-t border-border-subtle/50">
                   <a href="https://planejaai.xyz" target="_blank" rel="noopener noreferrer" className="text-accent-emerald font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">
@@ -184,9 +184,9 @@ export default function Home() {
                 <div className="w-14 h-14 rounded-2xl bg-white border border-red-600/20 flex items-center justify-center mb-6 shadow-sm relative z-10 group-hover:bg-red-600/5 transition-colors">
                   <PenTool className="text-red-600" size={28} />
                 </div>
-                <h3 className="text-2xl font-bold text-text-primary mb-3">RedaÃ§Ã£o Nota 10 AÃ</h3>
+                <h3 className="text-2xl font-bold text-text-primary mb-3">Redação Nota 10 AÍ</h3>
                 <p className="text-text-secondary text-sm leading-relaxed mb-8 flex-grow">
-                  Corretor automÃ¡tico de redaÃ§Ãµes nos padrÃµes do ENEM. Envie seu texto, receba feedback detalhado, competÃªncia por competÃªncia, e evolua instantaneamente.
+                  Corretor automático de redações nos padrões do ENEM. Envie seu texto, receba feedback detalhado, competência por competência, e evolua instantaneamente.
                 </p>
                 <div className="mt-auto pt-4 border-t border-border-subtle/50">
                   <a href="https://redacao-nota-10-ia.vercel.app" target="_blank" rel="noopener noreferrer" className="text-red-600 font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">
@@ -211,10 +211,10 @@ export default function Home() {
               <HeartHandshake size={18} /> Nosso Manifesto
             </div>
             <h2 className="text-3xl md:text-5xl font-bold text-text-primary mb-8 leading-tight">
-              Democratizar a inteligÃªncia artificial <br className="hidden md:block"/> para o Brasil real.
+              Democratizar a inteligência artificial <br className="hidden md:block"/> para o Brasil real.
             </h2>
             <p className="text-lg md:text-xl text-text-secondary leading-relaxed mb-16 max-w-3xl mx-auto">
-              Acreditamos que a tecnologia mais avanÃ§ada do mundo nÃ£o deve ser um luxo. Ela deve ser a ferramenta definitiva para que cada crianÃ§a aprenda no seu ritmo e cada professor recupere sua qualidade de vida. Nossos 4 pilares:
+              Acreditamos que a tecnologia mais avançada do mundo não deve ser um luxo. Ela deve ser a ferramenta definitiva para que cada criança aprenda no seu ritmo e cada professor recupere sua qualidade de vida. Nossos 4 pilares:
             </p>
           </ScrollReveal>
 
@@ -224,8 +224,8 @@ export default function Home() {
                 <div className="w-12 h-12 bg-indigo-50 text-primary-600 rounded-xl flex items-center justify-center mb-6">
                   <GraduationCap size={24} />
                 </div>
-                <h4 className="text-xl font-bold text-text-primary mb-3">Zero HumilhaÃ§Ã£o PedagÃ³gica</h4>
-                <p className="text-text-secondary">O aluno nunca Ã© exposto ao erro na frente da turma. A IA atua com acolhimento radical, permitindo que o estudante erre em um ambiente seguro atÃ© atingir a maestria.</p>
+                <h4 className="text-xl font-bold text-text-primary mb-3">Zero Humilhação Pedagógica</h4>
+                <p className="text-text-secondary">O aluno nunca é exposto ao erro na frente da turma. A IA atua com acolhimento radical, permitindo que o estudante erre em um ambiente seguro até atingir a maestria.</p>
               </div>
             </ScrollReveal>
             
@@ -234,8 +234,8 @@ export default function Home() {
                 <div className="w-12 h-12 bg-indigo-50 text-primary-600 rounded-xl flex items-center justify-center mb-6">
                   <Zap size={24} />
                 </div>
-                <h4 className="text-xl font-bold text-text-primary mb-3">PreÃ§o do Brasil Real</h4>
-                <p className="text-text-secondary">Se nÃ£o couber no orÃ§amento de uma famÃ­lia trabalhadora brasileira, nÃ³s nÃ£o faremos. Escalamos o software para que o acesso custe menos que um lanche na cantina.</p>
+                <h4 className="text-xl font-bold text-text-primary mb-3">Preço do Brasil Real</h4>
+                <p className="text-text-secondary">Se não couber no orçamento de uma família trabalhadora brasileira, nós não faremos. Escalamos o software para que o acesso custe menos que um lanche na cantina.</p>
               </div>
             </ScrollReveal>
 
@@ -245,7 +245,7 @@ export default function Home() {
                   <Clock size={24} />
                 </div>
                 <h4 className="text-xl font-bold text-text-primary mb-3">Tecnologia que Devolve Tempo</h4>
-                <p className="text-text-secondary">O professor nÃ£o deveria passar o domingo preenchendo planilhas. Nossa IA assume a burocracia para que o educador volte a focar na relaÃ§Ã£o humana.</p>
+                <p className="text-text-secondary">O professor não deveria passar o domingo preenchendo planilhas. Nossa IA assume a burocracia para que o educador volte a focar na relação humana.</p>
               </div>
             </ScrollReveal>
 
@@ -255,7 +255,7 @@ export default function Home() {
                   <Shield size={24} />
                 </div>
                 <h4 className="text-xl font-bold text-text-primary mb-3">Dignidade em Qualquer Idade</h4>
-                <p className="text-text-secondary">Desde a crianÃ§a no 1Âº ano atÃ© o adulto no EJA que nunca teve oportunidade escolar: a educaÃ§Ã£o precisa se adaptar ao ritmo de quem aprende, e nÃ£o o contrÃ¡rio.</p>
+                <p className="text-text-secondary">Desde a criança no 1º ano até o adulto no EJA que nunca teve oportunidade escolar: a educação precisa se adaptar ao ritmo de quem aprende, e não o contrário.</p>
               </div>
             </ScrollReveal>
           </div>
@@ -268,9 +268,9 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row items-center justify-between gap-16">
             <div className="lg:w-1/2">
               <ScrollReveal direction="left">
-                <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">ConstruÃ­do com rigor para o Brasil Real.</h2>
+                <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">Construído com rigor para o Brasil Real.</h2>
                 <p className="text-primary-400/90 text-lg mb-10 leading-relaxed max-w-lg">
-                  Nossa tecnologia nÃ£o substitui o professor â€” ela devolve o tempo e a dignidade para que o educador foque no que importa: a relaÃ§Ã£o humana dentro de sala de aula.
+                  Nossa tecnologia não substitui o professor — ela devolve o tempo e a dignidade para que o educador foque no que importa: a relação humana dentro de sala de aula.
                 </p>
                 
                 <div className="grid grid-cols-2 gap-8 mb-10">
@@ -278,40 +278,40 @@ export default function Home() {
                     <h4 className="text-4xl font-bold text-accent-cyan mb-2">
                       +<AnimatedCounter target={10000} />
                     </h4>
-                    <p className="text-primary-400 text-sm">Planos de aula gerados alinhados Ã  BNCC</p>
+                    <p className="text-primary-400 text-sm">Planos de aula gerados alinhados à BNCC</p>
                   </div>
                   <div>
                     <h4 className="text-4xl font-bold text-accent-amber mb-2">
                       <AnimatedCounter target={100} suffix="%" />
                     </h4>
-                    <p className="text-primary-400 text-sm">Privacidade LGPD e SeguranÃ§a de Dados</p>
+                    <p className="text-primary-400 text-sm">Privacidade LGPD e Segurança de Dados</p>
                   </div>
                   <div>
                     <h4 className="text-4xl font-bold text-accent-emerald mb-2">
                       <AnimatedCounter target={150} suffix="h+" />
                     </h4>
-                    <p className="text-primary-400 text-sm">Horas economizadas por professor/mÃªs</p>
+                    <p className="text-primary-400 text-sm">Horas economizadas por professor/mês</p>
                   </div>
                   <div>
                     <h4 className="text-4xl font-bold text-white mb-2">
                       <AnimatedCounter target={27} />
                     </h4>
-                    <p className="text-primary-400 text-sm">Estados brasileiros alcanÃ§ados</p>
+                    <p className="text-primary-400 text-sm">Estados brasileiros alcançados</p>
                   </div>
                 </div>
 
                 <div className="flex flex-col gap-4">
                   <div className="flex items-center gap-3">
                     <CheckCircle2 className="text-accent-emerald shrink-0" />
-                    <span className="font-medium text-sm md:text-base">Total integraÃ§Ã£o com parÃ¢metros da BNCC</span>
+                    <span className="font-medium text-sm md:text-base">Total integração com parâmetros da BNCC</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <ShieldCheck className="text-accent-cyan shrink-0" />
-                    <span className="font-medium text-sm md:text-base">AdaptaÃ§Ãµes automÃ¡ticas para AEE e PEI</span>
+                    <span className="font-medium text-sm md:text-base">Adaptações automáticas para AEE e PEI</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Zap className="text-accent-amber shrink-0" />
-                    <span className="font-medium text-sm md:text-base">Suporte multimodal com VisÃ£o Computacional</span>
+                    <span className="font-medium text-sm md:text-base">Suporte multimodal com Visão Computacional</span>
                   </div>
                 </div>
               </ScrollReveal>
@@ -331,7 +331,7 @@ export default function Home() {
                     </div>
                   </div>
                   <p className="text-lg italic text-primary-100 leading-relaxed relative z-10">
-                    "O Planeja AÃ me devolveu meus domingos com a famÃ­lia. E ver meus alunos usando o ReforÃ§a AÃ para estudar geometria por vontade prÃ³pria, tentando ganhar 'Aura', foi algo que eu nÃ£o via hÃ¡ 15 anos na minha escola."
+                    "O Planeja AÍ me devolveu meus domingos com a família. E ver meus alunos usando o Reforça AÍ para estudar geometria por vontade própria, tentando ganhar 'Aura', foi algo que eu não via há 15 anos na minha escola."
                   </p>
                 </div>
               </ScrollReveal>
@@ -344,12 +344,12 @@ export default function Home() {
                   <div className="flex gap-4 mb-6 relative z-10">
                     <div className="w-12 h-12 rounded-full bg-gradient-to-br from-accent-cyan to-blue-500 flex items-center justify-center font-bold text-lg shadow-lg shrink-0">JO</div>
                     <div className="flex flex-col justify-center">
-                      <h4 className="font-bold">JoÃ£o Oliveira</h4>
-                      <p className="text-primary-400 text-sm">Coordenador PedagÃ³gico, MG</p>
+                      <h4 className="font-bold">João Oliveira</h4>
+                      <p className="text-primary-400 text-sm">Coordenador Pedagógico, MG</p>
                     </div>
                   </div>
                   <p className="text-lg italic text-primary-100 leading-relaxed relative z-10">
-                    "As adaptaÃ§Ãµes do PEI que levÃ¡vamos horas para formatar agora saem prontas e totalmente alinhadas Ã s necessidades clÃ­nicas de cada aluno. A IA deles realmente entende a realidade da escola pÃºblica brasileira."
+                    "As adaptações do PEI que levávamos horas para formatar agora saem prontas e totalmente alinhadas às necessidades clínicas de cada aluno. A IA deles realmente entende a realidade da escola pública brasileira."
                   </p>
                 </div>
               </ScrollReveal>
@@ -369,10 +369,10 @@ export default function Home() {
               <Users size={18} /> Fale Conosco
             </div>
             <h2 className="text-3xl md:text-5xl font-bold text-text-primary mb-6">
-              Vamos transformar a educaÃ§Ã£o da sua rede?
+              Vamos transformar a educação da sua rede?
             </h2>
             <p className="text-lg text-text-secondary mb-12 max-w-2xl mx-auto">
-              Oferecemos parcerias institucionais para escolas, prefeituras e secretarias de educaÃ§Ã£o com subsÃ­dios exclusivos e integraÃ§Ã£o direta.
+              Oferecemos parcerias institucionais para escolas, prefeituras e secretarias de educação com subsídios exclusivos e integração direta.
             </p>
           </ScrollReveal>
 
@@ -380,7 +380,7 @@ export default function Home() {
             <div className="md:w-5/12">
               <ScrollReveal direction="left">
                 <h3 className="text-2xl font-bold text-primary-900 mb-4">Entre em Contato</h3>
-                <p className="text-text-secondary mb-8 leading-relaxed">Nossa equipe de consultores educacionais estÃ¡ pronta para desenhar uma implementaÃ§Ã£o sob medida para a sua realidade escolar.</p>
+                <p className="text-text-secondary mb-8 leading-relaxed">Nossa equipe de consultores educacionais está pronta para desenhar uma implementação sob medida para a sua realidade escolar.</p>
                 
                 <div className="flex flex-col gap-6">
                   <a href="mailto:contato@aitech.xyz" className="flex items-center gap-4 text-primary-900 hover:text-primary-600 font-medium transition-colors group">
@@ -397,7 +397,7 @@ export default function Home() {
                       <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" className="css-i6dzq1"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
                     </div>
                     <div>
-                      <div className="text-sm text-text-secondary">Atendimento rÃ¡pido</div>
+                      <div className="text-sm text-text-secondary">Atendimento rápido</div>
                       <div className="text-lg">WhatsApp Comercial</div>
                     </div>
                   </a>
@@ -425,7 +425,7 @@ export default function Home() {
                       <input required type="text" className="w-full px-4 py-3 rounded-xl border border-border-subtle bg-surface-light focus:bg-white focus:outline-none focus:border-primary-600 focus:ring-1 focus:ring-primary-600 transition-all" placeholder="Seu nome" />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-text-primary mb-1.5">Cargo / InstituiÃ§Ã£o</label>
+                      <label className="block text-sm font-medium text-text-primary mb-1.5">Cargo / Instituição</label>
                       <input required type="text" className="w-full px-4 py-3 rounded-xl border border-border-subtle bg-surface-light focus:bg-white focus:outline-none focus:border-primary-600 focus:ring-1 focus:ring-primary-600 transition-all" placeholder="Ex: Diretor, Esc. Municipal" />
                     </div>
                   </div>
@@ -454,4 +454,3 @@ export default function Home() {
     </main>
   );
 }
-
