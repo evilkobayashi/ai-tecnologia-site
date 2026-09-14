@@ -1,7 +1,7 @@
-﻿"use client";
+"use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles, BookOpen, BrainCircuit, LineChart, CheckCircle2, ShieldCheck, HeartHandshake, Zap, Users, MessageSquare, ChevronDown, Send, Shield, Clock, GraduationCap } from "lucide-react";
+import { ArrowRight, Sparkles, BookOpen, BrainCircuit, LineChart, CheckCircle2, ShieldCheck, HeartHandshake, Zap, Users, MessageSquare, ChevronDown, Send, Shield, Clock, GraduationCap, PenTool } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppFab from "@/components/WhatsAppFab";
