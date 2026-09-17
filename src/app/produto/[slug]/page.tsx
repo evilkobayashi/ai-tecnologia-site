@@ -67,8 +67,9 @@ const productsData = {
   }
 };
 
-export default function ProdutoPage({ params }: { params: { slug: string } }) {
-  const product = productsData[params.slug as keyof typeof productsData];
+export default async function ProdutoPage({ params }: { params: Promise<{ slug: string }> }) {
+  const resolvedParams = await params;
+  const product = productsData[resolvedParams.slug as keyof typeof productsData];
 
   if (!product) {
     notFound();
