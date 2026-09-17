@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles, BookOpen, BrainCircuit, LineChart, CheckCircle2, ShieldCheck, HeartHandshake, Zap, Users, MessageSquare, ChevronDown, Send, Shield, Clock, GraduationCap, PenTool } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight, Sparkles, BookOpen, BrainCircuit, LineChart, CheckCircle2, ShieldCheck, HeartHandshake, Zap, Users, MessageSquare, ChevronDown, Send, Shield, Clock, GraduationCap, PenTool, Mic, Brain } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppFab from "@/components/WhatsAppFab";
@@ -100,100 +101,107 @@ export default function Home() {
           </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <ScrollReveal delay={0.1} direction="up">
-              <motion.div 
-                whileHover={{ y: -5 }}
-                className="bg-surface-light border border-border-subtle rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all hover:border-accent-amber group overflow-hidden relative cursor-pointer h-full flex flex-col"
-              >
-                <div className="absolute top-0 right-0 w-32 h-32 bg-accent-amber/10 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
-                <div className="absolute top-6 right-6 px-3 py-1 bg-white/80 backdrop-blur-sm border border-border-subtle rounded-full text-xs font-bold text-text-secondary shadow-sm">
-                  Em Breve
-                </div>
-                <div className="w-14 h-14 rounded-2xl bg-white border border-accent-amber/20 flex items-center justify-center mb-6 shadow-sm relative z-10 group-hover:bg-accent-amber/5 transition-colors">
-                  <BookOpen className="text-accent-amber" size={28} />
-                </div>
-                <h3 className="text-2xl font-bold text-text-primary mb-3">Alfabetiza AÍ</h3>
-                <p className="text-text-secondary text-sm leading-relaxed mb-8 flex-grow">
-                  IA Voice-First para crianças, neurodivergentes e EJA. Aprenda a ler conversando, sem precisar saber ler.
-                </p>
-                <div className="mt-auto pt-4 border-t border-border-subtle/50">
-                  <span className="text-accent-amber font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">
-                    Saber mais <ArrowRight size={16} />
-                  </span>
-                </div>
-              </motion.div>
+            <ScrollReveal delay={0.1}>
+              <Link href="/produto/alfabetiza-ai" className="block group">
+                <motion.div 
+                  whileHover={{ y: -5 }}
+                  className="bg-white rounded-3xl p-8 border border-border-subtle shadow-sm hover:shadow-lg transition-all h-full flex flex-col relative overflow-hidden"
+                >
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-accent-amber/5 rounded-bl-full -z-10 group-hover:scale-110 transition-transform"></div>
+                  <div className="absolute top-4 right-4 bg-accent-amber/10 text-accent-amber text-xs font-bold px-3 py-1 rounded-full">
+                    Lançamento
+                  </div>
+                  <div className="w-14 h-14 rounded-2xl bg-white border border-accent-amber/20 flex items-center justify-center mb-6 shadow-sm relative z-10 group-hover:bg-accent-amber/5 transition-colors">
+                    <Mic className="text-accent-amber" size={28} />
+                  </div>
+                  <h3 className="text-2xl font-bold text-text-primary mb-3">Alfabetiza AÍ</h3>
+                  <p className="text-text-secondary text-sm leading-relaxed mb-8 flex-grow">
+                    IA Voice-First para crianças, neurodivergentes e EJA. Aprenda a ler conversando, sem precisar saber ler.
+                  </p>
+                  <div className="mt-auto pt-4 border-t border-border-subtle/50">
+                    <span className="text-accent-amber font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">
+                      Saber mais <ArrowRight size={16} />
+                    </span>
+                  </div>
+                </motion.div>
+              </Link>
             </ScrollReveal>
 
-            <ScrollReveal delay={0.2} direction="up">
-              <motion.div 
-                whileHover={{ y: -5 }}
-                className="bg-surface-light border border-border-subtle rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all hover:border-accent-cyan group overflow-hidden relative cursor-pointer h-full flex flex-col"
-              >
-                <div className="absolute top-0 right-0 w-32 h-32 bg-accent-cyan/10 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
-                <div className="absolute top-6 right-6 px-3 py-1 bg-white/80 backdrop-blur-sm border border-border-subtle rounded-full text-xs font-bold text-text-secondary shadow-sm">
-                  Lançamento 2026
-                </div>
-                <div className="w-14 h-14 rounded-2xl bg-white border border-accent-cyan/20 flex items-center justify-center mb-6 shadow-sm relative z-10 group-hover:bg-accent-cyan/5 transition-colors">
-                  <BrainCircuit className="text-accent-cyan" size={28} />
-                </div>
-                <h3 className="text-2xl font-bold text-text-primary mb-3">Reforça AÍ</h3>
-                <p className="text-text-secondary text-sm leading-relaxed mb-8 flex-grow">
-                  Tutor Socrático Gamificado (1º ao Médio). Tira foto do caderno e ensina sem dar a resposta pronta. (+500 Aura)
-                </p>
-                <div className="mt-auto pt-4 border-t border-border-subtle/50">
-                  <span className="text-accent-cyan font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">
-                    Saber mais <ArrowRight size={16} />
-                  </span>
-                </div>
-              </motion.div>
+            <ScrollReveal delay={0.2}>
+              <Link href="/produto/reforca-ai" className="block group">
+                <motion.div 
+                  whileHover={{ y: -5 }}
+                  className="bg-white rounded-3xl p-8 border border-border-subtle shadow-sm hover:shadow-lg transition-all h-full flex flex-col relative overflow-hidden"
+                >
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-accent-cyan/5 rounded-bl-full -z-10 group-hover:scale-110 transition-transform"></div>
+                  <div className="w-14 h-14 rounded-2xl bg-white border border-accent-cyan/20 flex items-center justify-center mb-6 shadow-sm relative z-10 group-hover:bg-accent-cyan/5 transition-colors">
+                    <Brain className="text-accent-cyan" size={28} />
+                  </div>
+                  <h3 className="text-2xl font-bold text-text-primary mb-3">Reforça AÍ</h3>
+                  <p className="text-text-secondary text-sm leading-relaxed mb-8 flex-grow">
+                    Tutor Socrático Gamificado (1º ao Médio). Tira foto do caderno e ensina sem dar a resposta pronta. (+500 Aura)
+                  </p>
+                  <div className="mt-auto pt-4 border-t border-border-subtle/50">
+                    <span className="text-accent-cyan font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">
+                      Saber mais <ArrowRight size={16} />
+                    </span>
+                  </div>
+                </motion.div>
+              </Link>
             </ScrollReveal>
 
-            <ScrollReveal delay={0.3} direction="up">
-              <motion.div 
-                whileHover={{ y: -5 }}
-                className="bg-surface-light border border-border-subtle rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all hover:border-accent-emerald group overflow-hidden relative h-full flex flex-col"
-              >
-                <div className="absolute top-0 right-0 w-32 h-32 bg-accent-emerald/10 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
-                <div className="absolute top-6 right-6 px-3 py-1 bg-emerald-100 border border-emerald-200 rounded-full text-xs font-bold text-emerald-700 shadow-sm animate-pulse">
-                  Ao Vivo
-                </div>
-                <div className="w-14 h-14 rounded-2xl bg-white border border-accent-emerald/20 flex items-center justify-center mb-6 shadow-sm relative z-10 group-hover:bg-accent-emerald/5 transition-colors">
-                  <LineChart className="text-accent-emerald" size={28} />
-                </div>
-                <h3 className="text-2xl font-bold text-text-primary mb-3">Planeja AÍ</h3>
-                <p className="text-text-secondary text-sm leading-relaxed mb-8 flex-grow">
-                  Co-piloto do educador. Gere planos de aula completos alinhados à BNCC e atividades AEE/PEI em menos de 60 segundos.
-                </p>
-                <div className="mt-auto pt-4 border-t border-border-subtle/50">
-                  <a href="https://planejaai.xyz" target="_blank" rel="noopener noreferrer" className="text-accent-emerald font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">
-                    Acessar Plataforma <ArrowRight size={16} />
-                  </a>
-                </div>
-              </motion.div>
+            <ScrollReveal delay={0.3}>
+              <Link href="/produto/planeja-ai" className="block group">
+                <motion.div 
+                  whileHover={{ y: -5 }}
+                  className="bg-white rounded-3xl p-8 border border-border-subtle shadow-sm hover:shadow-lg transition-all h-full flex flex-col relative overflow-hidden"
+                >
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-accent-emerald/5 rounded-bl-full -z-10 group-hover:scale-110 transition-transform"></div>
+                  <div className="absolute top-4 right-4 bg-accent-emerald/10 text-accent-emerald text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
+                    <span className="w-2 h-2 rounded-full bg-accent-emerald animate-pulse"></span>
+                    Ao Vivo
+                  </div>
+                  <div className="w-14 h-14 rounded-2xl bg-white border border-accent-emerald/20 flex items-center justify-center mb-6 shadow-sm relative z-10 group-hover:bg-accent-emerald/5 transition-colors">
+                    <LineChart className="text-accent-emerald" size={28} />
+                  </div>
+                  <h3 className="text-2xl font-bold text-text-primary mb-3">Planeja AÍ</h3>
+                  <p className="text-text-secondary text-sm leading-relaxed mb-8 flex-grow">
+                    Co-piloto do educador. Gere planos de aula completos alinhados à BNCC e atividades AEE/PEI em menos de 60 segundos.
+                  </p>
+                  <div className="mt-auto pt-4 border-t border-border-subtle/50">
+                    <span className="text-accent-emerald font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">
+                      Saber mais <ArrowRight size={16} />
+                    </span>
+                  </div>
+                </motion.div>
+              </Link>
             </ScrollReveal>
 
-            <ScrollReveal delay={0.4} direction="up">
-              <motion.div 
-                whileHover={{ y: -5 }}
-                className="bg-surface-light border border-border-subtle rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all hover:border-red-600 group overflow-hidden relative cursor-pointer h-full flex flex-col"
-              >
-                <div className="absolute top-0 right-0 w-32 h-32 bg-red-600/10 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
-                <div className="absolute top-6 right-6 px-3 py-1 bg-red-100 border border-red-200 rounded-full text-xs font-bold text-red-700 shadow-sm animate-pulse">
-                  Ao Vivo
-                </div>
-                <div className="w-14 h-14 rounded-2xl bg-white border border-red-600/20 flex items-center justify-center mb-6 shadow-sm relative z-10 group-hover:bg-red-600/5 transition-colors">
-                  <PenTool className="text-red-600" size={28} />
-                </div>
-                <h3 className="text-2xl font-bold text-text-primary mb-3">Redação Nota 10 AÍ</h3>
-                <p className="text-text-secondary text-sm leading-relaxed mb-8 flex-grow">
-                  Corretor automático de redações nos padrões do ENEM. Envie seu texto, receba feedback detalhado, competência por competência, e evolua instantaneamente.
-                </p>
-                <div className="mt-auto pt-4 border-t border-border-subtle/50">
-                  <a href="https://redacao-nota-10-ia.vercel.app" target="_blank" rel="noopener noreferrer" className="text-red-600 font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">
-                    Acessar Plataforma <ArrowRight size={16} />
-                  </a>
-                </div>
-              </motion.div>
+            <ScrollReveal delay={0.4}>
+              <Link href="/produto/redacao-nota-10-ia" className="block group">
+                <motion.div 
+                  whileHover={{ y: -5 }}
+                  className="bg-white rounded-3xl p-8 border border-border-subtle shadow-sm hover:shadow-lg transition-all h-full flex flex-col relative overflow-hidden"
+                >
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-accent-violet/5 rounded-bl-full -z-10 group-hover:scale-110 transition-transform"></div>
+                  <div className="absolute top-4 right-4 bg-accent-violet/10 text-accent-violet text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
+                    <span className="w-2 h-2 rounded-full bg-accent-violet animate-pulse"></span>
+                    Ao Vivo
+                  </div>
+                  <div className="w-14 h-14 rounded-2xl bg-white border border-accent-violet/20 flex items-center justify-center mb-6 shadow-sm relative z-10 group-hover:bg-accent-violet/5 transition-colors">
+                    <PenTool className="text-accent-violet" size={28} />
+                  </div>
+                  <h3 className="text-2xl font-bold text-text-primary mb-3">Redação Nota 10 AÍ</h3>
+                  <p className="text-text-secondary text-sm leading-relaxed mb-8 flex-grow">
+                    Corretor automático de redações nos padrões do ENEM. Envie seu texto, receba feedback detalhado, competência por competência, e evolua instantaneamente.
+                  </p>
+                  <div className="mt-auto pt-4 border-t border-border-subtle/50">
+                    <span className="text-accent-violet font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">
+                      Saber mais <ArrowRight size={16} />
+                    </span>
+                  </div>
+                </motion.div>
+              </Link>
             </ScrollReveal>
 
           </div>
