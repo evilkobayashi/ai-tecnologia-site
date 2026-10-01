@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import AnimatedText from "@/components/AnimatedText";
 import { ArrowRight } from "lucide-react";
 
 export default function Home() {
@@ -42,15 +43,13 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          >
-            <h1 className="font-sans text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-[0.9] text-white">
-              EDUCATIONAL <br/> INTELLIGENCE <br/> LAB
-            </h1>
-          </motion.div>
+          <div className="font-sans text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-[0.9] text-white uppercase">
+            <AnimatedText text="EDUCATIONAL" delay={0.6} />
+            <br />
+            <AnimatedText text="INTELLIGENCE" delay={0.7} />
+            <br />
+            <AnimatedText text="LAB" delay={0.8} />
+          </div>
         </div>
 
         <motion.div 

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Space_Mono, JetBrains_Mono } from "next/font/google";
+import SmoothScroll from "@/components/SmoothScroll";
 import "./globals.css";
 
 const spaceMono = Space_Mono({
@@ -26,8 +27,10 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={`${spaceMono.variable} ${jetbrainsMono.variable} antialiased bg-black text-text-primary min-h-screen flex flex-col`}>
-        <div className="bg-noise"></div>
-        {children}
+        <SmoothScroll>
+          <div className="bg-noise"></div>
+          {children}
+        </SmoothScroll>
       </body>
     </html>
   );
