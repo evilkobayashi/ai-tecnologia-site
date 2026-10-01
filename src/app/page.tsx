@@ -38,7 +38,7 @@ export default function Home() {
             className="w-full max-w-xl"
           >
             <p className="font-mono text-lg md:text-xl uppercase tracking-wider text-text-secondary leading-relaxed">
-              Transformamos a educação pública e privada através de <span className="text-black bg-white px-1">inteligência aplicada</span> e hardware educacional.
+              Transformamos a educação pública e privada através de <span className="text-black bg-white px-1">inteligência aplicada</span>.
             </p>
           </motion.div>
 
@@ -48,7 +48,7 @@ export default function Home() {
             transition={{ duration: 1, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >
             <h1 className="font-sans text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-[0.9] text-white">
-              EDUCATIONAL <br/> INTELLIGENCE <br/> & HARDWARE LAB
+              EDUCATIONAL <br/> INTELLIGENCE <br/> LAB
             </h1>
           </motion.div>
         </div>
@@ -83,8 +83,8 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 border-t border-border-subtle pt-8">
           {[
             {
-              title: "Impressão 3D Educacional",
-              desc: "Projetos de hardware, peças e jogos educativos em robótica manufaturados in-house para escolas, integrando o físico e o digital no ensino maker.",
+              title: "Redação Nota 10 AÍ",
+              desc: "Correção e feedback automatizado de redações com IA, focado nas competências do ENEM e aprimoramento da escrita.",
             },
             {
               title: "Reforça AÍ",
