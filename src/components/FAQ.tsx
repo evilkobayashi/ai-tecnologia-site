@@ -48,7 +48,7 @@ export default function FAQ() {
         <div className="flex flex-col gap-3">
           {faqs.map((faq, index) => (
             <ScrollReveal key={index} delay={index * 0.05}>
-              <div className="bg-white rounded-2xl border border-border-subtle shadow-sm overflow-hidden">
+              <div className="bg-transparent border border-border-subtle rounded-2xl border border-border-subtle shadow-sm overflow-hidden">
                 <button
                   onClick={() => setOpenIndex(openIndex === index ? null : index)}
                   className="w-full flex items-center justify-between p-6 text-left hover:bg-slate-50/50 transition-colors"

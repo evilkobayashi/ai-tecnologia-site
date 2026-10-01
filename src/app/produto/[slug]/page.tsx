@@ -124,7 +124,7 @@ export default async function ProdutoPage({ params }: { params: Promise<{ slug: 
         </Link>
         
         <ScrollReveal>
-          <div className="bg-white rounded-[2.5rem] p-8 md:p-14 shadow-sm border border-border-subtle relative overflow-hidden">
+          <div className="bg-transparent border border-border-subtle rounded-[2.5rem] p-8 md:p-14 shadow-sm border border-border-subtle relative overflow-hidden">
             <div className={`absolute top-0 right-0 w-64 h-64 ${t.bg10} rounded-bl-full -z-10`} />
             
             <div className="flex items-center gap-4 mb-6">

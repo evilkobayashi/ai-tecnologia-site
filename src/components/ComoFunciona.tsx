@@ -32,7 +32,7 @@ const steps = [
 
 export default function ComoFunciona() {
   return (
-    <section id="como-funciona" className="py-24 bg-white px-6 scroll-mt-20">
+    <section id="como-funciona" className="py-24 bg-transparent border border-border-subtle px-6 scroll-mt-20">
       <div className="max-w-5xl mx-auto">
         <ScrollReveal>
           <div className="text-center mb-16">

@@ -61,14 +61,14 @@ export default function Navbar() {
     >
       <div className={`max-w-5xl mx-auto rounded-2xl backdrop-blur-xl border shadow-lg px-6 py-4 flex items-center justify-between transition-all duration-300 ${
         scrolled
-          ? "bg-white/90 border-slate-200 shadow-indigo-900/10"
-          : "bg-white/70 border-white/20 shadow-indigo-900/5"
+          ? "bg-transparent border border-border-subtle/90 border-slate-200 shadow-indigo-900/10"
+          : "bg-transparent border border-border-subtle/70 border-white/20 shadow-indigo-900/5"
       }`}>
         <Link href="/" className="flex items-center">
           <img 
-            src="/assets/logo-ai-inpi-oficial.jpg" 
+            src="/assets/final-symbol-white.svg" 
             alt="AÍ Tecnologia e Educação" 
-            className="h-10 w-auto mix-blend-multiply" 
+            className="h-10 w-auto " 
           />
         </Link>
 
@@ -132,7 +132,7 @@ export default function Navbar() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -10, scale: 0.98 }}
               transition={{ duration: 0.2 }}
-              className="absolute top-[80px] left-4 right-4 bg-white/95 backdrop-blur-3xl rounded-2xl p-6 shadow-2xl border border-slate-100 flex flex-col gap-4 lg:hidden"
+              className="absolute top-[80px] left-4 right-4 bg-transparent border border-border-subtle/95 backdrop-blur-3xl rounded-2xl p-6 shadow-2xl border border-slate-100 flex flex-col gap-4 lg:hidden"
             >
               {navLinks.map((link) => (
                 <a

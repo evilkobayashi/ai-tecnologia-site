@@ -5,14 +5,14 @@ import { ArrowUpRight, ArrowUp, Mail } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-primary-900 text-white pt-20 pb-10 px-6 border-t border-primary-900/10 relative">
+    <footer className="bg-primary-900 text-black pt-20 pb-10 px-6 border-t border-primary-900/10 relative">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
         <div className="md:col-span-4 flex flex-col gap-6">
           <Link href="/" className="inline-block">
             <img 
-              src="/assets/logo-ai-dark.jpg" 
+              src="/assets/final-horizontal-white.svg" 
               alt="AÍ Tecnologia e Educação" 
-              className="h-12 w-auto mix-blend-screen" 
+              className="h-12 w-auto " 
             />
           </Link>
           <p className="text-primary-400/80 text-sm leading-relaxed max-w-sm">
@@ -28,7 +28,7 @@ export default function Footer() {
                   type="email" 
                   id="newsletter" 
                   placeholder="seu@email.com" 
-                  className="w-full bg-white/5 border border-white/10 rounded-lg pl-9 pr-4 py-2.5 text-sm focus:outline-none focus:border-primary-400 focus:ring-1 focus:ring-primary-400 transition-all text-white placeholder:text-primary-400/50"
+                  className="w-full bg-transparent border border-border-subtle/5 border border-white/10 rounded-lg pl-9 pr-4 py-2.5 text-sm focus:outline-none focus:border-primary-400 focus:ring-1 focus:ring-primary-400 transition-all text-white placeholder:text-primary-400/50"
                 />
               </div>
               <button type="submit" className="bg-primary-600 hover:bg-primary-500 text-white px-4 py-2.5 rounded-lg text-sm font-semibold transition-colors whitespace-nowrap">
@@ -86,7 +86,7 @@ export default function Footer() {
         {/* Back to top button */}
         <a 
           href="#" 
-          className="absolute -top-16 right-0 w-10 h-10 bg-white/10 hover:bg-white/20 text-white rounded-full flex items-center justify-center transition-colors shadow-lg backdrop-blur-sm group"
+          className="absolute -top-16 right-0 w-10 h-10 bg-transparent border border-border-subtle/10 hover:bg-transparent border border-border-subtle/20 text-white rounded-full flex items-center justify-center transition-colors shadow-lg backdrop-blur-sm group"
           aria-label="Voltar ao topo"
         >
           <ArrowUp size={18} className="group-hover:-translate-y-1 transition-transform" />
