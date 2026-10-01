@@ -22,10 +22,9 @@ export default function Home() {
         </motion.div>
         
         <nav className="hidden md:flex gap-8 font-mono text-xs tracking-widest uppercase text-text-secondary">
-          <a href="#imersao" className="hover:text-white transition-colors border-b border-transparent hover:border-white pb-1">01 Imersão</a>
-          <a href="#produtos" className="hover:text-white transition-colors border-b border-transparent hover:border-white pb-1">02 Produtos</a>
-          <a href="#metodo" className="hover:text-white transition-colors border-b border-transparent hover:border-white pb-1">03 Método</a>
-          <a href="#contato" className="hover:text-white transition-colors border-b border-transparent hover:border-white pb-1">04 Contato</a>
+          <a href="#produtos" className="hover:text-white transition-colors border-b border-transparent hover:border-white pb-1">01 Produtos</a>
+          <a href="#metodo" className="hover:text-white transition-colors border-b border-transparent hover:border-white pb-1">02 Método</a>
+          <a href="#contato" className="hover:text-white transition-colors border-b border-transparent hover:border-white pb-1">03 Contato</a>
         </nav>
       </header>
 
@@ -71,39 +70,12 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* Section 01 - A Virada */}
-      <section id="imersao" className="relative w-full max-w-7xl mx-auto py-32 border-t border-border-subtle flex flex-col gap-16">
-        <div className="flex items-center gap-4">
-          <span className="font-mono text-xs tracking-widest text-text-secondary">01</span>
-          <div className="flex-1 h-[1px] bg-border-subtle"></div>
-          <span className="font-mono text-xs tracking-widest text-text-secondary">Imersão</span>
-        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-sans font-medium text-white max-w-md leading-tight"
-          >
-            O aprendizado não é estático. É um sistema dinâmico de interação.
-          </motion.h2>
-          
-          <div className="flex flex-col gap-8 font-mono text-text-secondary text-base md:text-lg leading-relaxed">
-            <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
-              Entre o planejamento pedagógico e a execução em sala de aula, há professores, alunos e infraestrutura. A AÍ Tecnologia existe para fornecer inteligência e ferramentas físicas para esse ecossistema.
-            </motion.p>
-            <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
-              Desenvolvemos desde modelos generativos para tutoria até hardware educacional de baixo custo, reduzindo as barreiras de entrada para escolas brasileiras.
-            </motion.p>
-          </div>
-        </div>
-      </section>
 
-      {/* Section 02 - Produtos */}
+      {/* Section 01 - Produtos */}
       <section id="produtos" className="relative w-full max-w-7xl mx-auto py-32 border-t border-border-subtle flex flex-col gap-16">
         <div className="flex items-center gap-4">
-          <span className="font-mono text-xs tracking-widest text-text-secondary">02</span>
+          <span className="font-mono text-xs tracking-widest text-text-secondary">01</span>
           <div className="flex-1 h-[1px] bg-border-subtle"></div>
           <span className="font-mono text-xs tracking-widest text-text-secondary">Produtos & Tecnologias</span>
         </div>
