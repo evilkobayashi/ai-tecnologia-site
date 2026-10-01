@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 256" width="900" height="256">
+  <g transform="translate(0,0)">
+    <path d="M128 32 L32 224 L80 224 L128 128 L176 224 L224 224 Z" fill="#0B132B" />
+    <circle cx="128" cy="128" r="24" fill="#00E5FF" />
+  </g>
+  <text x="280" y="160" font-family="system-ui, -apple-system, sans-serif" font-size="96" font-weight="800" fill="#0B132B" letter-spacing="-2">AI Tecnologia</text>
+  <text x="280" y="220" font-family="system-ui, -apple-system, sans-serif" font-size="40" font-weight="600" fill="#555555" letter-spacing="4">E EDUCAÇÃO</text>
+</svg>
