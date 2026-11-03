@@ -1,29 +1,30 @@
 import type { Metadata } from "next";
-import { Space_Mono, JetBrains_Mono, Barlow } from "next/font/google";
-import SmoothScroll from "@/components/SmoothScroll";
+import { Instrument_Sans, Newsreader, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const spaceMono = Space_Mono({
-  weight: ["400", "700"],
-  variable: "--font-space-mono",
+const instrumentSans = Instrument_Sans({
+  weight: ["400", "500", "600"],
+  variable: "--font-sans-ui",
+  subsets: ["latin"],
+});
+
+const newsreader = Newsreader({
+  weight: ["400", "500"],
+  variable: "--font-display-serif",
   subsets: ["latin"],
 });
 
 const jetbrainsMono = JetBrains_Mono({
-  variable: "--font-berkeley-mono",
-  subsets: ["latin"],
-});
-
-const barlow = Barlow({
-  weight: ["800"],
-  variable: "--font-display",
+  weight: ["400", "500"],
+  variable: "--font-mono-code",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://aitecnologia.xyz"),
-  title: "AÍ Tecnologia e Educação — Educational Intelligence Lab",
-  description: "A inteligência que destrava o potencial da educação brasileira. Planeja AÍ, Reforça AÍ, Redação Nota 10 AÍ e Alfabetiza AÍ.",
+  title: "AÍ Tecnologia e Educação — Inteligência Pedagógica para Escolas",
+  description:
+    "Ecossistema pedagógico alinhado à BNCC para redes públicas e escolas privadas: Planeja AÍ, Reforça AÍ, Redação Nota 10 AÍ e Alfabetiza AÍ.",
   alternates: { canonical: "/" },
   robots: { index: true, follow: true },
   openGraph: {
@@ -31,8 +32,9 @@ export const metadata: Metadata = {
     url: "https://aitecnologia.xyz",
     siteName: "AÍ Tecnologia",
     locale: "pt_BR",
-    title: "AÍ Tecnologia e Educação — Educational Intelligence Lab",
-    description: "A inteligência que destrava o potencial da educação brasileira.",
+    title: "AÍ Tecnologia e Educação — Inteligência Pedagógica para Escolas",
+    description:
+      "Ecossistema pedagógico alinhado à BNCC para redes públicas e escolas privadas.",
   },
 };
 
@@ -43,11 +45,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`${spaceMono.variable} ${jetbrainsMono.variable} ${barlow.variable} antialiased bg-black text-text-primary min-h-screen flex flex-col`}>
-        <SmoothScroll>
-          <div className="bg-noise"></div>
-          {children}
-        </SmoothScroll>
+      <body
+        className={`${instrumentSans.variable} ${newsreader.variable} ${jetbrainsMono.variable} antialiased bg-page text-text-primary min-h-screen flex flex-col`}
+      >
+        {children}
       </body>
     </html>
   );

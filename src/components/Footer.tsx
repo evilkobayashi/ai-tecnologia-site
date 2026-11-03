@@ -1,96 +1,106 @@
-"use client";
-
 import Link from "next/link";
-import { ArrowUpRight, ArrowUp, Mail } from "lucide-react";
+import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
+
+const CONTACT_EMAIL = "contato@aitecnologia.xyz";
 
 export default function Footer() {
   return (
-    <footer className="bg-primary-900 text-black pt-20 pb-10 px-6 border-t border-primary-900/10 relative">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
-        <div className="md:col-span-4 flex flex-col gap-6">
-          <Link href="/" className="inline-block">
-            <img 
-              src="/assets/final-horizontal-white.svg" 
-              alt="AÍ Tecnologia e Educação" 
-              className="h-12 w-auto " 
-            />
-          </Link>
-          <p className="text-primary-400/80 text-sm leading-relaxed max-w-sm">
-            A inteligência que destrava o potencial da educação brasileira. Tecnologia de ponta, preço justo e muito calor humano.
-          </p>
-          
-          <form className="mt-4" onSubmit={(e) => e.preventDefault()}>
-            <label htmlFor="newsletter" className="block text-xs font-semibold text-primary-400 mb-2 uppercase tracking-wider">Assine nossa Newsletter</label>
-            <div className="flex gap-2">
-              <div className="relative flex-1">
-                <Mail size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-primary-400" />
-                <input 
-                  type="email" 
-                  id="newsletter" 
-                  placeholder="seu@email.com" 
-                  className="w-full bg-transparent border border-border-subtle/5 border border-white/10 rounded-lg pl-9 pr-4 py-2.5 text-sm focus:outline-none focus:border-primary-400 focus:ring-1 focus:ring-primary-400 transition-all text-white placeholder:text-primary-400/50"
-                />
-              </div>
-              <button type="submit" className="bg-primary-600 hover:bg-primary-500 text-white px-4 py-2.5 rounded-lg text-sm font-semibold transition-colors whitespace-nowrap">
-                Assinar
-              </button>
-            </div>
-          </form>
-        </div>
-        
-        <div className="md:col-span-2 flex flex-col gap-4">
-          <h4 className="font-semibold text-lg">Soluções</h4>
-          <a href="#ecossistema" className="text-primary-400/80 hover:text-white transition-colors text-sm">Alfabetiza AÍ</a>
-          <a href="#ecossistema" className="text-primary-400/80 hover:text-white transition-colors text-sm">Reforça AÍ</a>
-          <a href="#ecossistema" className="text-primary-400/80 hover:text-white transition-colors text-sm">Planeja AÍ</a>
+    <footer className="bg-[#efe9df] text-[#1f1b16] border-t border-[rgba(31,27,22,0.08)]">
+      <div className="max-w-[1440px] mx-auto px-6 md:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 pb-12 border-b border-[rgba(31,27,22,0.08)]">
+          <div className="md:col-span-5 flex flex-col gap-4">
+            <Link href="/" aria-label="AÍ Tecnologia — página inicial" className="relative w-32 h-8 block">
+              <Image
+                src="/assets/final-horizontal-black.svg"
+                alt="AÍ Tecnologia e Educação"
+                fill
+                className="object-contain object-left"
+              />
+            </Link>
+            <p className="text-[14px] leading-5 text-[#5e554a] max-w-sm">
+              Ferramentas de inteligência pedagógica alinhadas à BNCC para redes públicas, escolas particulares e cursinhos no Brasil.
+            </p>
+            <a
+              href={`mailto:${CONTACT_EMAIL}`}
+              className="font-mono text-[13px] leading-5 text-[#1f1b16] hover:text-[#1d4ed8] transition-colors duration-150 w-fit"
+            >
+              {CONTACT_EMAIL}
+            </a>
+          </div>
+
+          <div className="md:col-span-3 flex flex-col gap-2">
+            <p className="text-[12px] leading-4 font-mono text-[#7b7266] mb-2">Ecossistema</p>
+            <Link href="/produto/planeja-ai" className="h-8 inline-flex items-center text-[14px] text-[#5e554a] hover:text-[#1f1b16] transition-colors duration-150">
+              Planeja AÍ
+            </Link>
+            <Link href="/produto/reforca-ai" className="h-8 inline-flex items-center text-[14px] text-[#5e554a] hover:text-[#1f1b16] transition-colors duration-150">
+              Reforça AÍ
+            </Link>
+            <Link href="/produto/redacao-nota-10-ia" className="h-8 inline-flex items-center text-[14px] text-[#5e554a] hover:text-[#1f1b16] transition-colors duration-150">
+              Redação Nota 10 AÍ
+            </Link>
+            <Link href="/produto/alfabetiza-ai" className="h-8 inline-flex items-center text-[14px] text-[#5e554a] hover:text-[#1f1b16] transition-colors duration-150">
+              Alfabetiza AÍ
+            </Link>
+          </div>
+
+          <div className="md:col-span-2 flex flex-col gap-2">
+            <p className="text-[12px] leading-4 font-mono text-[#7b7266] mb-2">Navegação</p>
+            <Link href="/#imersao" className="h-8 inline-flex items-center text-[14px] text-[#5e554a] hover:text-[#1f1b16] transition-colors duration-150">
+              Contexto
+            </Link>
+            <Link href="/#metodo" className="h-8 inline-flex items-center text-[14px] text-[#5e554a] hover:text-[#1f1b16] transition-colors duration-150">
+              Método
+            </Link>
+            <Link href="/#contato" className="h-8 inline-flex items-center text-[14px] text-[#5e554a] hover:text-[#1f1b16] transition-colors duration-150">
+              Contato
+            </Link>
+          </div>
+
+          <div className="md:col-span-2 flex flex-col gap-2">
+            <p className="text-[12px] leading-4 font-mono text-[#7b7266] mb-2">Acesso direto</p>
+            <a
+              href="https://planeja.aitecnologia.xyz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="h-8 inline-flex items-center gap-2 text-[14px] text-[#5e554a] hover:text-[#1f1b16] transition-colors duration-150"
+            >
+              <span>Planeja AÍ</span>
+              <ArrowUpRight size={16} strokeWidth={1.5} className="text-[#7b7266]" />
+            </a>
+            <a
+              href="https://reforca.aitecnologia.xyz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="h-8 inline-flex items-center gap-2 text-[14px] text-[#5e554a] hover:text-[#1f1b16] transition-colors duration-150"
+            >
+              <span>Reforça AÍ</span>
+              <ArrowUpRight size={16} strokeWidth={1.5} className="text-[#7b7266]" />
+            </a>
+            <a
+              href="https://redacao.aitecnologia.xyz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="h-8 inline-flex items-center gap-2 text-[14px] text-[#5e554a] hover:text-[#1f1b16] transition-colors duration-150"
+            >
+              <span>Redação Nota 10</span>
+              <ArrowUpRight size={16} strokeWidth={1.5} className="text-[#7b7266]" />
+            </a>
+          </div>
         </div>
 
-        <div className="md:col-span-2 flex flex-col gap-4">
-          <h4 className="font-semibold text-lg">Institucional</h4>
-          <a href="#como-funciona" className="text-primary-400/80 hover:text-white transition-colors text-sm">Como Funciona</a>
-          <a href="#manifesto" className="text-primary-400/80 hover:text-white transition-colors text-sm">Nosso Manifesto</a>
-          <a href="#impacto" className="text-primary-400/80 hover:text-white transition-colors text-sm">Impacto Social</a>
-          <a href="#faq" className="text-primary-400/80 hover:text-white transition-colors text-sm">FAQ</a>
+        <div className="pt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-[13px] leading-5 text-[#7b7266]">
+          <p>© 2026 AÍ Tecnologia e Educação Ltda</p>
+          <div className="flex items-center gap-6">
+            <Link href="/termos" className="hover:text-[#1f1b16] transition-colors duration-150">
+              Termos de uso
+            </Link>
+            <Link href="/privacidade" className="hover:text-[#1f1b16] transition-colors duration-150">
+              Privacidade e LGPD
+            </Link>
+          </div>
         </div>
-        
-        <div className="md:col-span-2 flex flex-col gap-4">
-          <h4 className="font-semibold text-lg">Contato</h4>
-          <a href="#contato" className="text-primary-400/80 hover:text-white transition-colors text-sm">Fale Conosco</a>
-          <a href="#contato" className="text-primary-400/80 hover:text-white transition-colors text-sm">Contato B2B / B2G</a>
-          <a href="#contato" className="text-primary-400/80 hover:text-white transition-colors text-sm">Trabalhe Conosco</a>
-        </div>
-
-        <div className="md:col-span-2 flex flex-col gap-4">
-          <h4 className="font-semibold text-lg">Social</h4>
-          <a href="#" className="flex items-center gap-1 text-primary-400/80 hover:text-white transition-colors text-sm group">
-            LinkedIn <ArrowUpRight size={14} className="group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform" />
-          </a>
-          <a href="#" className="flex items-center gap-1 text-primary-400/80 hover:text-white transition-colors text-sm group">
-            Instagram <ArrowUpRight size={14} className="group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform" />
-          </a>
-          <a href="#" className="flex items-center gap-1 text-primary-400/80 hover:text-white transition-colors text-sm group">
-            WhatsApp <ArrowUpRight size={14} className="group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform" />
-          </a>
-        </div>
-      </div>
-
-      <div className="max-w-6xl mx-auto pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-primary-400/60 relative">
-        <p>© {new Date().getFullYear()} Aí Tecnologia e Educação Ltda. Todos os direitos reservados.</p>
-        
-        <div className="flex flex-wrap justify-center gap-4">
-          <Link href="/termos" className="hover:text-white transition-colors">Termos de Uso</Link>
-          <span className="hidden md:inline">•</span>
-          <Link href="/privacidade" className="hover:text-white transition-colors">Política de Privacidade (LGPD)</Link>
-        </div>
-        
-        {/* Back to top button */}
-        <a 
-          href="#" 
-          className="absolute -top-16 right-0 w-10 h-10 bg-transparent border border-border-subtle/10 hover:bg-transparent border border-border-subtle/20 text-white rounded-full flex items-center justify-center transition-colors shadow-lg backdrop-blur-sm group"
-          aria-label="Voltar ao topo"
-        >
-          <ArrowUp size={18} className="group-hover:-translate-y-1 transition-transform" />
-        </a>
       </div>
     </footer>
   );

@@ -1,79 +1,123 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-primary-900: #ededee;
-  --color-primary-800: #d4d4d4;
-  --color-primary-600: #a3a3a3;
-  --color-primary-400: #525252;
-  --color-primary-100: #262626;
-  --color-accent-cyan: #737373;
-  --color-accent-amber: #525252;
-  --color-accent-emerald: #404040;
-  --color-surface-light: #0b0b0c;
-  --color-text-primary: #ededee;
-  --color-text-secondary: #878787;
-  --color-border-subtle: #33333a;
-  --font-sans: var(--font-space-mono), "Courier New", monospace;
-  --font-mono: var(--font-berkeley-mono), "Courier New", monospace;
+  --color-page: #f6f3ec;
+  --color-card: #fcfaf5;
+  --color-raised: #ede7db;
+  --color-ink: #1c1915;
+  --color-primary-900: #1c1915;
+  --color-primary-800: #2e2922;
+  --color-primary-600: #1d4ed8;
+  --color-primary-500: #1e40af;
+  --color-primary-400: #574f45;
+  --color-primary-100: #ede7db;
+  --color-accent: #1d4ed8;
+  --color-accent-ink: #1e40af;
+  --color-edu-blue: #1d4ed8;
+  --color-edu-amber: #b45309;
+  --color-edu-crimson: #be123c;
+  --color-edu-emerald: #047857;
+  --color-surface: #f6f3ec;
+  --color-surface-light: #fcfaf5;
+  --color-text-primary: #1c1915;
+  --color-text-secondary: #574f45;
+  --color-text-muted: #786f63;
+  --color-border-subtle: rgba(28, 25, 21, 0.09);
+  --font-sans: var(--font-sans-ui), system-ui, -apple-system, sans-serif;
+  --font-serif: var(--font-display-serif), Georgia, serif;
+  --font-mono: var(--font-mono-code), monospace;
 }
 
 :root {
-  --background: #000000;
-  --foreground: #ededee;
-  --textPositive: #B7B7B7;
+  --background: #f6f3ec;
+  --foreground: #1c1915;
+  --ease-out-quart: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
 }
 
 ::selection {
-  background-color: #373737;
-  color: white;
-}
-::-moz-selection {
-  background-color: #373737;
-  color: white;
+  background-color: rgba(29, 78, 216, 0.14);
+  color: #1c1915;
 }
 
 *:focus-visible {
-  outline: 1px solid #ededee;
+  outline: 2px solid #1d4ed8;
   outline-offset: 2px;
-  border-radius: 0px;
+  border-radius: 4px;
 }
 
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-/* Background noise (syn.be style) */
-.bg-noise {
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  opacity: 0.03;
-  pointer-events: none;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-}
-
-/* Specific elements */
 h1, h2, h3, h4, h5, h6 {
   text-transform: none;
-  letter-spacing: -0.02em;
+  font-weight: 400;
 }
 
-html { scroll-behavior: smooth; }
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Signature detail: BNCC curriculum tag */
+.bncc-code {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background-color: #ede7db;
+  border: 1px solid rgba(28, 25, 21, 0.09);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  color: #574f45;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Animated editorial highlighter mark */
+.editorial-highlight {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+.editorial-highlight::after {
+  content: "";
+  position: absolute;
+  left: -4px;
+  right: -4px;
+  bottom: 4px;
+  height: 12px;
+  background-color: rgba(217, 119, 6, 0.22);
+  border-radius: 2px;
+  z-index: -1;
+  transform-origin: left center;
+  animation: drawHighlight 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.25s both;
+}
+
+@keyframes drawHighlight {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 @media print {
   nav, footer, .whatsapp-fab {

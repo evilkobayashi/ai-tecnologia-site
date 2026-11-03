@@ -1,165 +1,106 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ArrowRight } from "lucide-react";
-import { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
+import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
-const navLinks = [
-  { href: "#ecossistema", label: "Soluções" },
-  { href: "#como-funciona", label: "Como Funciona" },
-  { href: "#manifesto", label: "Manifesto" },
-  { href: "#impacto", label: "Impacto" },
-  { href: "#faq", label: "FAQ" },
-  { href: "#contato", label: "Contato" },
+const NAV_LINKS = [
+  { href: "/#imersao", label: "Contexto" },
+  { href: "/#produtos", label: "Produtos" },
+  { href: "/#metodo", label: "Método" },
+  { href: "/#contato", label: "Contato" },
 ];
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState("");
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-
-      // Detect active section
-      const sections = navLinks.map((l) => l.href.replace("#", ""));
-      let current = "";
-      for (const id of sections) {
-        const el = document.getElementById(id);
-        if (el) {
-          const rect = el.getBoundingClientRect();
-          if (rect.top <= 150) {
-            current = id;
-          }
-        }
-      }
-      setActiveSection(current);
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  // Lock body scroll when mobile menu is open
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-    return () => { document.body.style.overflow = ""; };
-  }, [isOpen]);
+  const [open, setOpen] = useState(false);
 
   return (
-    <motion.header
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
-      className="fixed top-0 left-0 right-0 z-50 px-4 pt-4 pb-2"
-    >
-      <div className={`max-w-5xl mx-auto rounded-2xl backdrop-blur-xl border shadow-lg px-6 py-4 flex items-center justify-between transition-all duration-300 ${
-        scrolled
-          ? "bg-transparent border border-border-subtle/90 border-slate-200 shadow-indigo-900/10"
-          : "bg-transparent border border-border-subtle/70 border-white/20 shadow-indigo-900/5"
-      }`}>
-        <Link href="/" className="flex items-center">
-          <img 
-            src="/assets/final-symbol-white.svg" 
-            alt="AÍ Tecnologia e Educação" 
-            className="h-10 w-auto " 
-          />
+    <header className="sticky top-0 z-50 h-16 w-full bg-[#f7f4ee]/95 backdrop-blur-sm border-b border-[rgba(31,27,22,0.08)]">
+      <div className="max-w-[1440px] mx-auto h-full px-6 md:px-8 flex items-center justify-between gap-6">
+        <Link href="/" aria-label="AÍ Tecnologia — página inicial" className="flex items-center gap-3 shrink-0">
+          <div className="relative w-32 h-8">
+            <Image
+              src="/assets/final-horizontal-black.svg"
+              alt="AÍ Tecnologia e Educação"
+              fill
+              priority
+              className="object-contain object-left"
+            />
+          </div>
         </Link>
 
-        {/* Desktop Menu */}
-        <nav className="hidden lg:flex items-center gap-6 font-medium text-sm text-text-secondary">
-          {navLinks.map((link) => (
-            <a
+        <nav aria-label="Principal" className="hidden md:flex items-center gap-8">
+          {NAV_LINKS.map((link) => (
+            <Link
               key={link.href}
               href={link.href}
-              className={`hover:text-primary-600 transition-colors relative py-1 ${
-                activeSection === link.href.replace("#", "")
-                  ? "text-primary-600"
-                  : ""
-              }`}
+              className="text-[14px] leading-5 font-normal text-[#5e554a] hover:text-[#1f1b16] transition-colors duration-150"
             >
               {link.label}
-              {activeSection === link.href.replace("#", "") && (
-                <motion.div
-                  layoutId="activeNav"
-                  className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary-600 rounded-full"
-                  transition={{ type: "spring", stiffness: 380, damping: 30 }}
-                />
-              )}
-            </a>
+            </Link>
           ))}
         </nav>
 
-        {/* Desktop CTA */}
-        <div className="hidden lg:flex">
-          <a href="#contato" className="bg-primary-600 text-white px-5 py-2.5 rounded-xl font-semibold text-sm hover:scale-105 active:scale-95 transition-all shadow-md shadow-primary-600/20 flex items-center gap-2 group">
-            Começar Agora
-            <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+        <div className="hidden md:flex items-center gap-6">
+          <a
+            href="https://planeja.aitecnologia.xyz"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[14px] leading-5 font-normal text-[#5e554a] hover:text-[#1f1b16] transition-colors duration-150"
+          >
+            Entrar no Planeja AÍ
           </a>
+          <Link
+            href="/#contato"
+            className="h-9 px-4 rounded-[8px] bg-[#1f1b16] text-[#f7f4ee] text-[14px] leading-5 font-medium inline-flex items-center justify-center hover:bg-[#332d25] active:scale-[0.98] transition-[background-color,transform] duration-150"
+          >
+            Agendar demonstração
+          </Link>
         </div>
 
-        {/* Mobile Toggle */}
         <button
-          className="lg:hidden text-primary-900 p-1"
-          onClick={() => setIsOpen(!isOpen)}
-          aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
-          aria-expanded={isOpen}
+          type="button"
+          onClick={() => setOpen((v) => !v)}
+          aria-expanded={open}
+          aria-label={open ? "Fechar menu" : "Abrir menu"}
+          className="md:hidden h-9 w-9 rounded-[8px] border border-[rgba(31,27,22,0.08)] bg-[#fdfbf7] inline-flex items-center justify-center text-[#5e554a] hover:text-[#1f1b16] transition-colors duration-150"
         >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
+          {open ? <X size={18} strokeWidth={1.5} /> : <Menu size={18} strokeWidth={1.5} />}
         </button>
       </div>
 
-      {/* Mobile Menu Dropdown */}
-      <AnimatePresence>
-        {isOpen && (
-          <>
-            {/* Backdrop */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setIsOpen(false)}
-              className="fixed inset-0 bg-black/20 backdrop-blur-sm lg:hidden -z-10"
-            />
-            <motion.div
-              initial={{ opacity: 0, y: -10, scale: 0.98 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: -10, scale: 0.98 }}
-              transition={{ duration: 0.2 }}
-              className="absolute top-[80px] left-4 right-4 bg-transparent border border-border-subtle/95 backdrop-blur-3xl rounded-2xl p-6 shadow-2xl border border-slate-100 flex flex-col gap-4 lg:hidden"
+      {open && (
+        <div className="md:hidden bg-[#fdfbf7] border-b border-[rgba(31,27,22,0.08)] px-6 py-4 flex flex-col gap-3">
+          {NAV_LINKS.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={() => setOpen(false)}
+              className="h-9 flex items-center text-[15px] text-[#1f1b16] font-normal"
             >
-              {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setIsOpen(false)}
-                  className={`font-semibold text-lg transition-colors ${
-                    activeSection === link.href.replace("#", "")
-                      ? "text-primary-600"
-                      : "text-primary-900"
-                  }`}
-                >
-                  {link.label}
-                </a>
-              ))}
-              <hr className="border-border-subtle my-2" />
-              <a
-                href="#contato"
-                onClick={() => setIsOpen(false)}
-                className="bg-primary-600 text-white w-full py-3 rounded-xl font-semibold flex justify-center hover:bg-primary-500 transition-colors"
-              >
-                Começar Agora
-              </a>
-            </motion.div>
-          </>
-        )}
-      </AnimatePresence>
-    </motion.header>
+              {link.label}
+            </Link>
+          ))}
+          <div className="pt-3 border-t border-[rgba(31,27,22,0.08)] flex flex-col gap-3">
+            <a
+              href="https://planeja.aitecnologia.xyz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="h-9 flex items-center text-[14px] text-[#5e554a]"
+            >
+              Entrar no Planeja AÍ
+            </a>
+            <Link
+              href="/#contato"
+              onClick={() => setOpen(false)}
+              className="h-10 px-4 rounded-[8px] bg-[#1f1b16] text-[#f7f4ee] text-[14px] font-medium inline-flex items-center justify-center"
+            >
+              Agendar demonstração
+            </Link>
+          </div>
+        </div>
+      )}
+    </header>
   );
 }
