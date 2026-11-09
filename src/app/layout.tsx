@@ -21,15 +21,22 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://aitecnologia.xyz"),
+  metadataBase: new URL("https://www.aitecnologia.xyz"),
   title: "AÍ Tecnologia e Educação — Inteligência Pedagógica para Escolas",
   description:
     "Ecossistema pedagógico alinhado à BNCC para redes públicas e escolas privadas: Planeja AÍ, Reforça AÍ, Redação Nota 10 AÍ e Alfabetiza AÍ.",
   alternates: { canonical: "/" },
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    apple: "/icon.svg",
+  },
   robots: { index: true, follow: true },
   openGraph: {
     type: "website",
-    url: "https://aitecnologia.xyz",
+    url: "https://www.aitecnologia.xyz",
     siteName: "AÍ Tecnologia",
     locale: "pt_BR",
     title: "AÍ Tecnologia e Educação — Inteligência Pedagógica para Escolas",

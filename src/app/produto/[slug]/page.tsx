@@ -134,7 +134,7 @@ export async function generateMetadata({
   if (!product) return {};
 
   const title = `${product.name} — AÍ Tecnologia e Educação`;
-  const url = `https://aitecnologia.xyz/produto/${slug}`;
+  const url = `https://www.aitecnologia.xyz/produto/${slug}`;
 
   return {
     title,
@@ -182,7 +182,7 @@ export default async function ProdutoPage({ params }: { params: Promise<{ slug: 
     provider: {
       "@type": "Organization",
       name: "AÍ Tecnologia e Educação",
-      url: "https://aitecnologia.xyz",
+      url: "https://www.aitecnologia.xyz",
     },
   };
 

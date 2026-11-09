@@ -1,5 +1,16 @@
+import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+
+export const metadata: Metadata = {
+  title: "Política de Privacidade e LGPD — AÍ Tecnologia e Educação",
+  description:
+    "Diretrizes de proteção e tratamento de dados pedagógicos e escolares em conformidade com a LGPD (Lei nº 13.709/2018).",
+  alternates: {
+    canonical: "/privacidade",
+  },
+  robots: { index: true, follow: true },
+};
 
 export default function Privacidade() {
   return (

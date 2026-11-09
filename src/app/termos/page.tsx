@@ -1,5 +1,16 @@
+import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+
+export const metadata: Metadata = {
+  title: "Termos de Uso — AÍ Tecnologia e Educação",
+  description:
+    "Termos e condições de uso das plataformas educacionais da AÍ Tecnologia e Educação para escolas, redes e usuários.",
+  alternates: {
+    canonical: "/termos",
+  },
+  robots: { index: true, follow: true },
+};
 
 export default function Termos() {
   return (

@@ -650,6 +650,17 @@ function ContactForm() {
 }
 
 export default function Home() {
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const search = window.location.search;
+      const hash = window.location.hash;
+      if (search.includes("code=")) {
+        window.location.href = `https://redacao.aitecnologia.xyz/auth/callback${search}`;
+      } else if (hash.includes("access_token=")) {
+        window.location.href = `https://redacao.aitecnologia.xyz/dashboard${hash}`;
+      }
+    }
+  }, []);
   return (
     <div className="min-h-screen flex flex-col bg-[#f6f3ec] text-[#1c1915]">
       <Navbar />
