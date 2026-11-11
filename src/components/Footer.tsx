@@ -53,6 +53,9 @@ export default function Footer() {
             <Link href="/#metodo" className="h-8 inline-flex items-center text-[14px] text-[#5e554a] hover:text-[#1f1b16] transition-colors duration-150">
               Método
             </Link>
+            <Link href="/conformidade" className="h-8 inline-flex items-center text-[14px] text-[#5e554a] hover:text-[#1f1b16] transition-colors duration-150">
+              Conformidade MEC
+            </Link>
             <Link href="/#contato" className="h-8 inline-flex items-center text-[14px] text-[#5e554a] hover:text-[#1f1b16] transition-colors duration-150">
               Contato
             </Link>
@@ -93,6 +96,9 @@ export default function Footer() {
         <div className="pt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-[13px] leading-5 text-[#7b7266]">
           <p>© 2026 AÍ Tecnologia e Educação Ltda</p>
           <div className="flex items-center gap-6">
+            <Link href="/conformidade" className="hover:text-[#1f1b16] transition-colors duration-150">
+              Conformidade MEC 2026
+            </Link>
             <Link href="/termos" className="hover:text-[#1f1b16] transition-colors duration-150">
               Termos de uso
             </Link>

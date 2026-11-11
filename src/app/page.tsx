@@ -11,6 +11,7 @@ import {
   FileText,
   Mic,
   PenTool,
+  ShieldCheck,
   SlidersHorizontal,
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
@@ -996,6 +997,38 @@ export default function Home() {
                   </ul>
                 </div>
               ))}
+            </FadeIn>
+
+            {/* Banner Institucional de Conformidade MEC 2026 */}
+            <FadeIn className="mt-8 rounded-[12px] bg-[#ede7db] border border-[rgba(28,25,21,0.09)] p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+              <div className="flex items-start gap-4 max-w-3xl">
+                <div className="h-10 w-10 rounded-full bg-[#1d4ed8]/10 text-[#1d4ed8] flex items-center justify-center shrink-0 mt-1">
+                  <ShieldCheck size={22} />
+                </div>
+                <div>
+                  <div className="flex flex-wrap items-center gap-2 mb-1">
+                    <span className="font-mono text-[12px] text-[#1d4ed8] font-medium">
+                      Diretrizes MEC / UNESCO 2026 • ECA Digital (Lei nº 15.211/2025)
+                    </span>
+                    <span className="px-2 py-0.5 rounded bg-[#047857]/10 text-[#047857] text-[11px] font-mono">
+                      100% Auditado
+                    </span>
+                  </div>
+                  <h3 className="text-[18px] md:text-[20px] font-serif text-[#1c1915] mb-1">
+                    Inteligência Artificial centrada na agência do professor e na proteção do estudante
+                  </h3>
+                  <p className="text-[14px] leading-5 text-[#574f45]">
+                    Nossas plataformas seguem rigorosamente os 10 princípios fundamentais do MEC: preservação da soberania docente, combate ao descarregamento cognitivo discente, zero perfilamento comercial de menores e rejeição a vigilância facial.
+                  </p>
+                </div>
+              </div>
+              <Link
+                href="/conformidade"
+                className="h-10 px-5 rounded-[8px] bg-[#1c1915] text-[#f6f3ec] text-[14px] leading-5 font-medium inline-flex items-center gap-2 hover:bg-[#332d25] transition-colors shrink-0"
+              >
+                <span>Matriz de Conformidade</span>
+                <ArrowRight size={16} />
+              </Link>
             </FadeIn>
           </div>
         </section>

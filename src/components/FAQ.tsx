@@ -24,7 +24,11 @@ const faqs = [
   },
   {
     question: "Os dados dos alunos estão seguros?",
-    answer: "Sim. Seguimos rigorosamente a LGPD (Lei Geral de Proteção de Dados). Dados de menores são tratados com camada extra de proteção, criptografia ponta a ponta e nunca são compartilhados ou vendidos para terceiros."
+    answer: "Sim. Seguimos rigorosamente a LGPD (Lei nº 13.709/2018) e o ECA Digital (Lei nº 15.211/2025). Dados de crianças e adolescentes possuem salvaguardas reforçadas, criptografia de ponta a ponta, zero retenção para treinamento público de IA e proibição categórica de comercialização ou perfilamento."
+  },
+  {
+    question: "As plataformas seguem as Diretrizes do MEC para Inteligência Artificial na Educação Básica?",
+    answer: "Sim, com 100% de conformidade com o Documento Orientador do MEC / UNESCO (2026). Garantimos a primazia da agência docente (Teacher-in-the-Loop — a IA atua como copiloto e nunca substitui o educador), proteção contra o descarregamento cognitivo discente, transparência de modelos, audição de vieses e apoio a práticas de IA Desplugada."
   },
   {
     question: "Posso testar antes de contratar?",

@@ -9,6 +9,7 @@ const NAV_LINKS = [
   { href: "/#imersao", label: "Contexto" },
   { href: "/#produtos", label: "Produtos" },
   { href: "/#metodo", label: "Método" },
+  { href: "/conformidade", label: "Conformidade MEC" },
   { href: "/#contato", label: "Contato" },
 ];
 

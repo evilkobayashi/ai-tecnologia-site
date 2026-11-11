@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { ArrowLeft, ArrowUpRight, Check } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, Check, ShieldCheck, GraduationCap, AlertCircle, ArrowRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -25,6 +25,17 @@ const productsData = {
       "Ponte pedagógica que sugere aulas de reforço com base nas dúvidas da turma",
       "Exportação pronta para impressão e assinatura em PDF e Word (DOCX)",
     ],
+    mecCompliance: {
+      badge: "Conformidade MEC 2026 • Teacher-in-the-Loop & BNCC Computação",
+      principleHighlight: "Princípios 1, 4, 5 e 10 (Centralidade Humana, Agência Docente e Alerta de Alucinação)",
+      summary: "Preserva a agência incondicional do professor sobre o currículo e exige curadoria ativa antes da aplicação em sala de aula.",
+      safeguards: [
+        "Workflow Teacher-in-the-Loop com confirmação explícita de curadoria pedagógica prévia pelo educador",
+        "Aviso institucional permanente de risco de alucinação probabilística e dever de checagem de fontes",
+        "Incorporação dos eixos de Pensamento Computacional e Cultura Digital (Resolução CNE/CP 1/2022 e CNE/CEB 2/2025)",
+        "Sugestões dedicadas para atividades de IA Desplugada (dinâmicas concretas sem tela em sala de aula)",
+      ],
+    },
     platformUrl: "https://planeja.aitecnologia.xyz",
     artifactTitle: "Exemplo de saída • Plano Semanal Oficial (A4)",
     artifactMeta: "Turma 9º Ano • Matemática",
@@ -53,6 +64,17 @@ const productsData = {
       "Mapeamento silencioso das principais dúvidas por habilidade BNCC",
       "Bússola vocacional integrada para escolha de cursos técnicos (ETEC e IFs)",
     ],
+    mecCompliance: {
+      badge: "Conformidade MEC 2026 • Anti-Descarregamento Cognitivo",
+      principleHighlight: "Princípios 2, 5, 6 e 8 (Salvaguarda de Aprendizagem e Proteção de Menores)",
+      summary: "Impede o cognitive offloading por meio de travas socráticas ativas que obrigam o estudante a raciocinar.",
+      safeguards: [
+        "Trava socrática estrita: a IA é impedida de fornecer respostas diretas aos deveres escolares",
+        "Aviso metacognitivo discente ressaltando que o raciocínio e a resolução ativa pertencem ao aluno",
+        "Dashboard do professor com controle total de recalibração e override das trilhas sugeridas",
+        "Conformidade integral com o ECA Digital (Lei 15.211/2025): zero perfilamento comercial de crianças",
+      ],
+    },
     platformUrl: "https://reforca.aitecnologia.xyz",
     artifactTitle: "Exemplo de sessão • Mediação Socrática",
     artifactMeta: "Equação do 1º Grau • 2x + 6 = 18",
@@ -81,6 +103,17 @@ const productsData = {
       "Verificação de originalidade e repertório sociocultural",
       "Histórico de evolução da turma por competência para o professor de redação",
     ],
+    mecCompliance: {
+      badge: "Conformidade MEC 2026 • Parecer Consultivo e Primazia Docente",
+      principleHighlight: "Princípios 1, 3, 5 e 10 (Soberania Avaliativa e Transparência de Critérios)",
+      summary: "Laudos diagnósticos de apoio formativo, preservando inalterada a autoridade da banca examinadora e do professor.",
+      safeguards: [
+        "Aviso explícito de status consultivo e formativo, não constituindo veredito acadêmico sumário",
+        "Preservação da primazia avaliativa do professor de Língua Portuguesa e garantia de revisão humana",
+        "Explicabilidade minuciosa das notas por competência com apontamentos linguísticos objetivos",
+        "Vedação categórica de retenção ou cessão das redações escolares para treino de modelos comerciais",
+      ],
+    },
     platformUrl: "https://redacao.aitecnologia.xyz",
     artifactTitle: "Exemplo de laudo • Matriz Oficial ENEM",
     artifactMeta: "Nota global: 920 / 1000",
@@ -109,6 +142,17 @@ const productsData = {
       "Trilha específica para Educação de Jovens e Adultos (EJA) sem infantilização",
       "Relatório de evolução fonêmica alinhado às habilidades EF01LP e EF15LP da BNCC",
     ],
+    mecCompliance: {
+      badge: "Conformidade MEC 2026 • ECA Digital & Biometria de Voz Efêmera",
+      principleHighlight: "Princípios 6, 7 e 8 (Proteção Integral de Menores e Não-Vigilância)",
+      summary: "Tratamento de voz infantil estritamente em tempo real, com descarte imediato e zero gravação persistente.",
+      safeguards: [
+        "Áudios processados exclusivamente em tempo real para devolutiva fonética e destruídos em memória volátil",
+        "Conformidade com o Art. 11 e 14 da LGPD e Arts. 7º, 8º e 22 do ECA Digital (Lei 15.211/2025)",
+        "Exigência mandatória de mediação pedagógica em sala ou supervisão parental ativa",
+        "Recomendação integrada de dinâmicas corporais, motricidade fina e práticas lúdicas sem tela",
+      ],
+    },
     platformUrl: "https://alfabetiza.aitecnologia.xyz",
     artifactTitle: "Exemplo de trilha • Escuta Fonética por Voz",
     artifactMeta: "Consciência silábica • Sem digitação",
@@ -221,6 +265,10 @@ export default async function ProdutoPage({ params }: { params: Promise<{ slug: 
                 <span className="px-2.5 py-0.5 rounded-[4px] bg-[#047857]/10 text-[#047857] font-mono text-[12px] leading-4">
                   {product.status}
                 </span>
+                <span className="px-2.5 py-0.5 rounded-[4px] bg-[#1d4ed8]/10 text-[#1d4ed8] font-mono text-[12px] leading-4 flex items-center gap-1">
+                  <ShieldCheck size={12} />
+                  MEC 2026 Auditado
+                </span>
               </div>
 
               <h1 className="font-serif text-[40px] md:text-[56px] leading-[1.05] tracking-[-0.02em] text-[#1c1915]">
@@ -241,6 +289,44 @@ export default async function ProdutoPage({ params }: { params: Promise<{ slug: 
                   Funcionamento pedagógico
                 </h2>
                 <p className="text-[15px] leading-[24px] text-[#574f45]">{product.longDescription}</p>
+              </div>
+
+              {/* Seção de Conformidade Ética MEC 2026 */}
+              <div className="pt-4 border-t border-[rgba(28,25,21,0.09)]">
+                <div className="p-5 rounded-2xl bg-[#ede7db] border border-[rgba(28,25,21,0.1)] flex flex-col gap-3">
+                  <div className="flex items-center justify-between gap-2">
+                    <div className="flex items-center gap-2">
+                      <GraduationCap size={18} className="text-[#047857]" />
+                      <h3 className="text-[15px] font-semibold text-[#1c1915]">
+                        {product.mecCompliance.badge}
+                      </h3>
+                    </div>
+                    <span className="text-[11px] font-mono text-[#786f63]">MEC / UNESCO</span>
+                  </div>
+
+                  <p className="text-[13px] leading-[20px] text-[#574f45]">
+                    {product.mecCompliance.summary}
+                  </p>
+
+                  <div className="pt-2 border-t border-[rgba(28,25,21,0.08)] space-y-2">
+                    {product.mecCompliance.safeguards.map((item, idx) => (
+                      <div key={idx} className="flex items-start gap-2 text-[13px] leading-[19px] text-[#1c1915]">
+                        <Check size={14} className="text-[#047857] shrink-0 mt-0.5" />
+                        <span>{item}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="pt-2 flex items-center justify-between text-[12px] font-mono text-[#786f63]">
+                    <span>{product.mecCompliance.principleHighlight}</span>
+                    <Link
+                      href="/conformidade"
+                      className="text-[#1d4ed8] hover:underline font-sans font-medium inline-flex items-center gap-1"
+                    >
+                      Ver Matriz Completa <ArrowRight size={12} />
+                    </Link>
+                  </div>
+                </div>
               </div>
 
               <div className="pt-4 flex flex-wrap items-center gap-4">
